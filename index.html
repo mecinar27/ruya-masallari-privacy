@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rüya Masalları – Yasal Bilgilendirmeler</title>
+<style>
+  :root {
+    --primary: #6a1b9a;
+    --primary-light: #9c27b0;
+    --primary-dark: #4a148c;
+    --accent: #ab47bc;
+    --bg: #f3e5f5;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text2: #4a4a4a;
+    --text3: #757575;
+    --border: #e1bee7;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+    color: white;
+    padding: 32px 20px 28px;
+    text-align: center;
+  }
+  header .emoji { font-size: 48px; margin-bottom: 12px; }
+  header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  header p { font-size: 13px; opacity: 0.85; }
+  nav {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background: #f3e5f5;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  nav a:hover { background: var(--primary); color: white; }
+  main { max-width: 800px; margin: 0 auto; padding: 24px 16px 48px; }
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .section-header h2 { font-size: 16px; font-weight: 700; }
+  .section-header .arrow { font-size: 18px; transition: transform 0.2s; }
+  .section-header.open .arrow { transform: rotate(180deg); }
+  .section-body { padding: 20px; display: none; }
+  .section-body.open { display: block; }
+  h3 { color: var(--primary-dark); font-size: 14px; margin: 18px 0 8px; font-weight: 700; }
+  h4 { color: var(--text2); font-size: 13px; margin: 12px 0 6px; font-weight: 600; }
+  p { margin-bottom: 10px; color: var(--text2); font-size: 14px; }
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  ul li { color: var(--text2); font-size: 14px; margin-bottom: 4px; }
+  .meta {
+    font-size: 12px;
+    color: var(--text3);
+    background: #f3e5f5;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  th {
+    background: #f3e5f5;
+    color: var(--primary-dark);
+    font-weight: 600;
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  td {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    color: var(--text2);
+    vertical-align: top;
+  }
+  .contact-box {
+    background: #f3e5f5;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--primary-dark);
+  }
+  .contact-box strong { display: block; margin-bottom: 4px; }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text3);
+    padding: 24px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .child-box {
+    background: #fff3e0;
+    border: 1px solid #ff9800;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #5d4037;
+    margin: 10px 0;
+  }
+  .child-box strong { color: #e65100; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="emoji">🌙</div>
+  <h1>Rüya Masalları</h1>
+  <p>Yasal Bilgilendirmeler ve Gizlilik Politikası</p>
+</header>
+
+<nav>
+  <a href="#gizlilik">Gizlilik Politikası</a>
+  <a href="#kvkk">KVKK Aydınlatma</a>
+  <a href="#kullanim">Kullanım Şartları</a>
+  <a href="#takip">Takip Teknolojileri</a>
+  <a href="#ihlal">Veri İhlali</a>
+</nav>
+
+<main>
+
+  <!-- GİZLİLİK POLİTİKASI -->
+  <div class="section" id="gizlilik">
+    <div class="section-header open" onclick="toggle(this)">
+      <h2>🔒 Gizlilik Politikası</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body open">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026 &nbsp;|&nbsp; Yürürlük: 23 Nisan 2026</div>
+
+      <div class="child-box">
+        🧒 <strong>Önemli Not:</strong> Rüya Masalları çocuklara yönelik bir uygulamadır. Uygulama çocuklardan kişisel veri toplamaz. Ebeveyn veya vasisin gözetiminde kullanılması tavsiye edilir.
+      </div>
+
+      <h3>1. Veri Sorumlusu</h3>
+      <p>Rüya Masalları uygulaması, bağımsız geliştirici <strong>mecinar27</strong> tarafından sunulmaktadır.</p>
+      <div class="contact-box">
+        <strong>İletişim:</strong>
+        E-posta: mecinar27@gmail.com<br>
+        Konum: Gaziantep, Türkiye
+      </div>
+
+      <h3>2. Toplanan Veriler</h3>
+      <h4>2.1. Yerel Masal Verileri</h4>
+      <p>Oluşturulan masallar, favori masallar ve uygulama içi ayarlar yalnızca cihazınızdaki Room veritabanında yerel olarak saklanır. Bu verilere uzaktan erişilemez, buluta yüklenmez.</p>
+      <h4>2.2. Yapay Zeka API Kullanımı (Masal Oluşturma)</h4>
+      <p>Masal oluşturma özelliği Google Gemini API kullanmaktadır. Ebeveyn/kullanıcı tarafından seçilen tema, yaş grubu ve karakter adı gibi bilgiler masal üretimi amacıyla Google sunucularına iletilir. Bu veriler Google'ın gizlilik politikasına tabidir: policies.google.com/privacy</p>
+      <h4>2.3. Görsel İçerik</h4>
+      <p>Masal kapak görselleri Pollinations.ai servisi aracılığıyla oluşturulur. İçerik üretimi için belirlenen masal teması bu servise iletilir. Kişisel bilgi gönderilmez.</p>
+      <h4>2.4. Bildirimler</h4>
+      <p>Yatma vakti hatırlatma bildirimleri yerel olarak planlanır. Firebase gibi uzak push bildirim servisi kullanılmaz.</p>
+      <h4>2.5. Hesap ve Kimlik Bilgisi</h4>
+      <p>Rüya Masalları hesap oluşturma gerektirmez. E-posta adresi, isim veya kimlik bilgisi toplanmaz.</p>
+
+      <h3>3. Çocukların Gizliliği</h3>
+      <p>Uygulama çocuklara yönelik olup 13 yaş altı kullanıcıların kişisel verilerini bilinçli olarak toplamaz. Ebeveyn veya vasi masal oluşturma sırasında çocuğun gerçek adı veya kişisel bilgilerini girmemeye özen göstermelidir. Bu tür bilgilerin girilmesi halinde Gemini API'ye iletilecektir.</p>
+
+      <h3>4. Veri Paylaşımı</h3>
+      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz, satılmaz veya kiralanmaz. Harici API servisleri yalnızca içerik üretimi ve reklam gösterimi amacıyla kullanılır.</p>
+
+      <h3>5. Reklam Sistemi</h3>
+      <p>Rüya Masalları, <strong>ödüllü reklam</strong> (rewarded ad) modeli kullanmaktadır:</p>
+      <ul>
+        <li>Her kullanıcıya başlangıçta <strong>2 ücretsiz masal hakkı</strong> tanınır.</li>
+        <li>Ücretsiz hak tükendikten sonra isteğe bağlı reklam izlenerek <strong>ek masal hakkı</strong> kazanılabilir.</li>
+        <li><strong>Masal Kütüphanesi</strong> bölümünde hazır masalları okumak için reklam izlenmesi gerekebilir.</li>
+        <li>Reklamlar yalnızca kullanıcının isteğiyle başlatılır; zorunlu reklam gösterimi yapılmaz.</li>
+      </ul>
+      <p>Reklamlar Google AdMob altyapısı üzerinden sunulmaktadır. AdMob, reklamları kişiselleştirmek amacıyla reklam kimliği (Advertising ID) kullanabilir. Bu tercihi Android cihazınızın Ayarlar → Google → Reklamlar bölümünden yönetebilirsiniz.</p>
+
+      <h3>6. Veri Güvenliği</h3>
+      <p>Yerel veriler Android'in güvenli depolama alanında saklanır. API bağlantıları HTTPS/TLS ile şifrelenerek iletilir.</p>
+
+      <h3>7. Veri Silme</h3>
+      <p>Uygulama içinden masallar tek tek silinebilir. Tüm verileri silmek için Ayarlar → Uygulama Yönetimi → Rüya Masalları → Veri Temizle yolu kullanılabilir.</p>
+
+      <div class="contact-box">
+        Sorularınız için: <strong>mecinar27@gmail.com</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- KVKK -->
+  <div class="section" id="kvkk">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📋 KVKK Aydınlatma Metni</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>Veri Sorumlusu</h3>
+      <p><strong>Unvan:</strong> mecinar27 (Bağımsız Geliştirici)<br>
+      <strong>E-posta:</strong> mecinar27@gmail.com<br>
+      <strong>Konum:</strong> Gaziantep, Türkiye</p>
+
+      <h3>İşlenen Kişisel Veriler</h3>
+      <table>
+        <tr>
+          <th>Veri Kategorisi</th>
+          <th>İşlenen Veriler</th>
+          <th>Hukuki Sebep</th>
+          <th>Saklama Süresi</th>
+        </tr>
+        <tr>
+          <td>Masal İçeriği</td>
+          <td>Tema, yaş grubu, karakter adı seçimleri</td>
+          <td>Sözleşmenin İfası</td>
+          <td>Cihazda – kullanıcı silinceye kadar</td>
+        </tr>
+        <tr>
+          <td>AI API İçeriği</td>
+          <td>Masal parametreleri (Gemini API)</td>
+          <td>Açık Rıza</td>
+          <td>Google'ın politikasına tabi</td>
+        </tr>
+        <tr>
+          <td>Görsel İçerik</td>
+          <td>Masal görseli için tema (Pollinations.ai)</td>
+          <td>Açık Rıza</td>
+          <td>Pollinations.ai politikasına tabi</td>
+        </tr>
+        <tr>
+          <td>Reklam Verisi</td>
+          <td>Reklam kimliği (Advertising ID), reklam etkileşim verisi (AdMob)</td>
+          <td>Meşru Menfaat / Açık Rıza</td>
+          <td>Google AdMob politikasına tabi</td>
+        </tr>
+        <tr>
+          <td>Masal Hakkı</td>
+          <td>Ücretsiz hak sayacı (yerel)</td>
+          <td>Sözleşmenin İfası</td>
+          <td>Cihazda – uygulama kaldırılana kadar</td>
+        </tr>
+      </table>
+
+      <h3>Çocukların Verileri</h3>
+      <div class="child-box">
+        🧒 Uygulama çocuklara yönelik olup 13 yaş altı çocuklardan kişisel veri toplanmaz. Ebeveyn/vasi, çocuğun kişisel bilgilerinin masal parametrelerine girilmemesini sağlamakla yükümlüdür. Çocuğa ait verilerin işlenmesi için ebeveyn rızası aranır.
+      </div>
+
+      <h3>Yurt Dışı Veri Aktarımı</h3>
+      <p>Masal üretimi için Gemini API (Google LLC, ABD) ve Pollinations.ai kullanılmaktadır. Bu aktarımlar KVKK'nın 9. maddesi kapsamında uygun güvenlik önlemleri alınarak gerçekleştirilir.</p>
+
+      <h3>KVKK Kapsamındaki Haklarınız</h3>
+      <ul>
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+        <li>İşlenmişse bilgi talep etme</li>
+        <li>Yanlış işlenmişse düzeltilmesini isteme</li>
+        <li>Koşullar oluştuğunda silinmesini talep etme</li>
+        <li>İşlemeye itiraz etme</li>
+        <li>Zararın giderilmesini talep etme</li>
+      </ul>
+
+      <h3>Başvuru Yöntemi</h3>
+      <p>Haklarınızı kullanmak için <strong>mecinar27@gmail.com</strong> adresine e-posta gönderebilirsiniz. Başvurular 30 gün içinde ücretsiz yanıtlanır.</p>
+    </div>
+  </div>
+
+  <!-- KULLANIM ŞARTLARI -->
+  <div class="section" id="kullanim">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📄 Kullanım Şartları</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>1. Taraflar ve Kapsam</h3>
+      <p>Bu kullanım şartları, <strong>Rüya Masalları</strong> uygulamasını sunan mecinar27 (Geliştirici) ile uygulamayı kullanan kişi (Kullanıcı/Ebeveyn) arasında geçerlidir. Uygulamayı indirerek bu şartları kabul etmiş sayılırsınız.</p>
+
+      <h3>2. Uygulamanın Amacı</h3>
+      <p>Rüya Masalları; çocuklara özel, yapay zeka destekli kişiselleştirilmiş uyku masalları oluşturan ücretsiz bir Android uygulamasıdır.</p>
+
+      <h3>3. Ebeveyn Sorumluluğu</h3>
+      <div class="child-box">
+        🧒 <strong>Ebeveyn/Vasi Yükümlülüğü:</strong>
+        <ul style="margin-top:8px">
+          <li>Uygulama 13 yaş altı çocuklar için ebeveyn gözetiminde kullanılmalıdır.</li>
+          <li>Masal oluşturma sırasında çocuğun gerçek adı, okul adı veya kişisel bilgileri girilmemelidir.</li>
+          <li>Masal içeriklerinin çocuğa uygun olduğundan ebeveyn sorumludur.</li>
+        </ul>
+      </div>
+
+      <h3>4. Yapay Zeka İçerikleri</h3>
+      <p>Masallar Google Gemini API tarafından otomatik olarak oluşturulur. İçerikler dini, ahlaki veya eğitimsel otorite niteliği taşımaz. Üretilen içeriklerin çocuğa uygunluğunu değerlendirmek ebeveynin sorumluluğundadır. Uygunsuz içerik üretilmesi durumunda mecinar27@gmail.com adresine bildirin.</p>
+
+      <h3>5. Görsel İçerik</h3>
+      <p>Masal görselleri Pollinations.ai servisi tarafından üretilir. Görseller yapay zeka tarafından oluşturulmuş olup gerçek kişileri veya telif hakkı korumalı karakterleri temsil etmez.</p>
+
+      <h3>6. Kullanım Koşulları</h3>
+      <ul>
+        <li>Uygulama yalnızca kişisel ve eğitim amaçlı kullanılabilir.</li>
+        <li>Üretilen masal içerikleri ticari amaçla kullanılamaz veya dağıtılamaz.</li>
+        <li>Uygulamanın tersine mühendislik ile çözülmesi yasaktır.</li>
+      </ul>
+
+      <h3>7. Sorumluluk Sınırları</h3>
+      <p>Uygulama "olduğu gibi" sunulmaktadır. AI tarafından üretilen içeriklerin doğruluğu veya uygunluğu garanti edilmez. API kesintileri, çeviri hataları veya içerik yanlışlıklarından doğan zararlardan geliştirici sorumlu tutulamaz.</p>
+
+      <h3>8. Fikri Mülkiyet</h3>
+      <p>Uygulama tasarımı ve yazılım bileşenleri mecinar27'ye aittir. AI tarafından üretilen masal içerikleri kullanıcıya aittir; ancak ticari kullanım hakları saklıdır.</p>
+
+      <h3>9. Uygulanacak Hukuk</h3>
+      <p>Bu şartlar Türk Hukuku'na tabidir. Uyuşmazlıklarda Gaziantep mahkemeleri ve tüketici hakem heyetleri yetkilidir.</p>
+
+      <div class="contact-box">
+        İletişim: <strong>mecinar27@gmail.com</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAKİP TEKNOLOJİLERİ -->
+  <div class="section" id="takip">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📡 Takip Teknolojileri Politikası</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>Kullanılan Teknolojiler</h3>
+      <p>Rüya Masalları ödüllü reklam sistemi için <strong>Google AdMob SDK</strong> kullanmaktadır. Analitik izleme veya kullanıcı profilleme amacıyla başka bir SDK kullanılmaz.</p>
+
+      <h4>Harici Servis 1: Google AdMob</h4>
+      <p>Ödüllü reklamların gösterimi için kullanılır. AdMob, reklam kişiselleştirmesi amacıyla cihazın Advertising ID'sini kullanabilir. Kullanıcı reklamı izlemeden önce reklam başlamaz (isteğe bağlı). Kişiselleştirilmiş reklam tercihleri: Ayarlar → Google → Reklamlar.</p>
+
+      <h4>Harici Servis 2: Google Gemini API</h4>
+      <p>Masal metni üretimi için kullanılır. Seçilen tema, yaş grubu ve karakter adı Google sunucularına iletilir.</p>
+
+      <h4>Harici Servis 2: Pollinations.ai</h4>
+      <p>Masal kapak görseli üretimi için kullanılır. Masal teması bu servise iletilir; kişisel bilgi gönderilmez.</p>
+
+      <h3>Yerel Depolama</h3>
+      <p>Tüm masal içerikleri ve uygulama ayarları Android Room veritabanında yerel olarak saklanır. Bulut yedeklemesi yapılmaz.</p>
+
+      <h3>Bildirimler</h3>
+      <p>Yatma vakti hatırlatıcıları yerel bildirim olarak planlanır. Firebase veya uzak push servisi kullanılmaz.</p>
+
+      <h3>Kontrol ve Tercihler</h3>
+      <ul>
+        <li>Bildirim izni: Cihaz Ayarları → Bildirimler → Rüya Masalları</li>
+        <li>Tüm uygulama verisi: Ayarlar → Uygulama Yönetimi → Rüya Masalları → Veri Temizle</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- VERİ İHLALİ -->
+  <div class="section" id="ihlal">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>🛡️ Veri İhlali Bildirimi</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+
+      <h3>Risk Değerlendirmesi</h3>
+      <p>Rüya Masalları sunucu tabanlı kullanıcı verisi tutmadığından sunucu taraflı veri ihlali riski yoktur. Tüm veriler cihazda yerel olarak saklanır.</p>
+
+      <h3>Çocuk Verilerinde Ekstra Önlem</h3>
+      <div class="child-box">
+        🧒 Uygulama çocuklara yöneliktir. Çocuğa ait verilere ilişkin herhangi bir ihlal şüphesinde ebeveyn/vasi öncelikli olarak bilgilendirilir.
+      </div>
+
+      <h3>Olası Riskler</h3>
+      <ul>
+        <li>Cihaza fiziksel yetkisiz erişim</li>
+        <li>Gemini API veya Pollinations.ai kaynaklı ihlal</li>
+      </ul>
+
+      <h3>Bildirim Süreci</h3>
+      <p>Bir ihlal durumunda etkilenen kullanıcılar mümkün olan en kısa sürede bilgilendirilir ve KVKK'ya gerekli sürede bildirim yapılır.</p>
+
+      <h3>Güvenlik Bildirimi</h3>
+      <div class="contact-box">
+        <strong>Güvenlik Açığı Bildirimi:</strong> mecinar27@gmail.com<br>
+        Konu: Güvenlik Açığı – Rüya Masalları<br>
+        Yanıt süresi: 48 saat
+      </div>
+
+      <h3>KVKK İletişim</h3>
+      <div class="contact-box">
+        <strong>Kişisel Verileri Koruma Kurumu</strong><br>
+        Necatibey Cad. No:114 Sıhhiye/Çankaya/ANKARA<br>
+        Tel: +90 312 967 88 00 | Web: www.kvkk.gov.tr
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 mecinar27. Tüm hakları saklıdır.</p>
+  <p style="margin-top:6px">Bu belgeler Rüya Masalları uygulaması için geçerlidir.</p>
+  <p style="margin-top:6px">İletişim: mecinar27@gmail.com</p>
+</footer>
+
+<script>
+  function toggle(header) {
+    header.classList.toggle('open');
+    const body = header.nextElementSibling;
+    body.classList.toggle('open');
+  }
+  document.querySelectorAll('.section-body').forEach((b, i) => {
+    if (i === 0) b.classList.add('open');
+  });
+</script>
+</body>
+</html>
