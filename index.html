@@ -169,7 +169,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body open">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026 &nbsp;|&nbsp; Yürürlük: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 7 Temmuz 2026 &nbsp;|&nbsp; Yürürlük: 7 Temmuz 2026</div>
 
       <div class="child-box">
         🧒 <strong>Önemli Not:</strong> Rüya Masalları çocuklara yönelik bir uygulamadır. Uygulama çocuklardan kişisel veri toplamaz. Ebeveyn veya vasisin gözetiminde kullanılması tavsiye edilir.
@@ -199,20 +199,29 @@
       <p>Uygulama çocuklara yönelik olup 13 yaş altı kullanıcıların kişisel verilerini bilinçli olarak toplamaz. Ebeveyn veya vasi masal oluşturma sırasında çocuğun gerçek adı veya kişisel bilgilerini girmemeye özen göstermelidir. Bu tür bilgilerin girilmesi halinde Gemini API'ye iletilecektir.</p>
 
       <h3>4. Veri Paylaşımı</h3>
-      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz, satılmaz veya kiralanmaz. Harici API servisleri yalnızca içerik üretimi ve reklam gösterimi amacıyla kullanılır.</p>
+      <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz, satılmaz veya kiralanmaz. Harici servisler yalnızca içerik üretimi ve abonelik yönetimi amacıyla kullanılır. <strong>Uygulama reklam göstermez.</strong></p>
 
-      <h3>5. Reklam Sistemi</h3>
-      <p>Rüya Masalları, <strong>ödüllü reklam</strong> (rewarded ad) modeli kullanmaktadır:</p>
+      <h3>5. Abonelik ve Ücretsiz Kullanım</h3>
+      <p>Rüya Masalları <strong>reklamsız</strong> bir freemium model kullanır: ücretsiz katman ve premium abonelik.</p>
       <ul>
-        <li>Her kullanıcıya başlangıçta <strong>2 ücretsiz masal hakkı</strong> tanınır.</li>
-        <li>Ücretsiz hak tükendikten sonra isteğe bağlı reklam izlenerek <strong>ek masal hakkı</strong> kazanılabilir.</li>
-        <li><strong>Masal Kütüphanesi</strong> bölümünde hazır masalları okumak için reklam izlenmesi gerekebilir.</li>
-        <li>Reklamlar yalnızca kullanıcının isteğiyle başlatılır; zorunlu reklam gösterimi yapılmaz.</li>
+        <li>Her kullanıcıya günlük <strong>2 ücretsiz masal hakkı</strong> tanınır.</li>
+        <li><strong>Premium üyelik</strong> ile günde 10 masal, Özel Gün Masalı, Boyama Sayfası, TTS (sesli okuma), masal devam ettirme ve tüm özellikler açılır.</li>
+        <li>Premium planlar: Aylık abonelik ve Yıllık abonelik (otomatik yenilenen) seçeneklerinden oluşur.</li>
+        <li>Abonelikler Google Play üzerinden yönetilir. Satın alma, iptal ve iade işlemleri Google Play Fatura politikasına tabidir.</li>
+        <li>Abonelik yönetimi için: <strong>play.google.com/store/account/subscriptions</strong></li>
       </ul>
-      <p>Reklamlar Google AdMob altyapısı üzerinden sunulmaktadır. AdMob, reklamları kişiselleştirmek amacıyla reklam kimliği (Advertising ID) kullanabilir. Bu tercihi Android cihazınızın Ayarlar → Google → Reklamlar bölümünden yönetebilirsiniz.</p>
+      <p><strong>Uygulama hiçbir reklam göstermez; reklam SDK'sı, reklam kimliği (AAID) veya izleme teknolojisi kullanmaz.</strong> Ödeme işlemleri yalnızca Google Play Billing üzerinden yapılır; geliştirici ödeme bilgilerinize erişemez.</p>
 
-      <h3>6. Veri Güvenliği</h3>
-      <p>Yerel veriler Android'in güvenli depolama alanında saklanır. API bağlantıları HTTPS/TLS ile şifrelenerek iletilir.</p>
+      <h3>6. Veri Güvenliği ve Kişisel/Hassas Veri İşleme Süreçleri</h3>
+      <p>Rüya Masalları, kişisel nitelikli verileri (örn. çocuğun adı) ve hassas sayılabilecek verileri (örn. ebeveyn tarafından girilen davranışsal notlar) aşağıdaki güvenli süreçlerle işler:</p>
+      <ul>
+        <li><strong>Aktarım Güvenliği:</strong> Cihazınızdan sunucularımıza ve yapay zeka servislerine giden tüm veriler HTTPS/TLS protokolüyle uçtan uca şifrelenir. Şifresiz (cleartext) bağlantıya izin verilmez.</li>
+        <li><strong>Amaç Sınırlaması:</strong> Kişisel/hassas veriler yalnızca talep edilen masalı üretmek amacıyla işlenir; reklam, profilleme veya satış amacıyla kullanılmaz.</li>
+        <li><strong>Üçüncü Taraf İşleyici:</strong> Masal üretimi için veriler Google Gemini API'ye iletilir. Google'ın standart API şartları kapsamında gönderilen içerik, Google tarafından ürün geliştirme amacıyla kullanılabilir. Detaylar için: ai.google.dev/gemini-api/terms</li>
+        <li><strong>Yerel Depolama Güvenliği:</strong> Cihazda tutulan veriler Android'in uygulamaya özel, korumalı (sandboxed) depolama alanında saklanır; başka uygulamalar bu verilere erişemez.</li>
+        <li><strong>Asgari Veri Toplama:</strong> Uygulama yalnızca masalı kişiselleştirmek için gerekli asgari bilgiyi ister; ebeveynler isim alanını boş bırakıp "Rastgele" seçeneğiyle hiç kişisel veri girmeden uygulamayı kullanabilir.</li>
+        <li><strong>Sunucu Tarafı Erişim Kısıtlaması:</strong> Kendi sunucumuzda (Google Apps Script) yalnızca cihaz kimliğine bağlı günlük kullanım sayacı tutulur; bu veriye yalnızca geliştirici erişebilir ve talep üzerine 30 gün içinde silinir.</li>
+      </ul>
 
       <h3>7. Veri Silme</h3>
       <p>Uygulama içinden masallar tek tek silinebilir. Tüm verileri silmek için Ayarlar → Uygulama Yönetimi → Rüya Masalları → Veri Temizle yolu kullanılabilir.</p>
@@ -230,7 +239,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 7 Temmuz 2026</div>
 
       <h3>Veri Sorumlusu</h3>
       <p><strong>Unvan:</strong> mecinar27 (Bağımsız Geliştirici)<br>
@@ -264,14 +273,14 @@
           <td>Pollinations.ai politikasına tabi</td>
         </tr>
         <tr>
-          <td>Reklam Verisi</td>
-          <td>Reklam kimliği (Advertising ID), reklam etkileşim verisi (AdMob)</td>
-          <td>Meşru Menfaat / Açık Rıza</td>
-          <td>Google AdMob politikasına tabi</td>
+          <td>Abonelik Verisi</td>
+          <td>Satın alma token'ı, abonelik durumu (Google Play Billing)</td>
+          <td>Sözleşmenin İfası</td>
+          <td>Google Play politikasına tabi</td>
         </tr>
         <tr>
           <td>Masal Hakkı</td>
-          <td>Ücretsiz hak sayacı (yerel)</td>
+          <td>Günlük kullanım sayacı (yerel)</td>
           <td>Sözleşmenin İfası</td>
           <td>Cihazda – uygulama kaldırılana kadar</td>
         </tr>
@@ -307,13 +316,20 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 7 Temmuz 2026</div>
 
       <h3>1. Taraflar ve Kapsam</h3>
       <p>Bu kullanım şartları, <strong>Rüya Masalları</strong> uygulamasını sunan mecinar27 (Geliştirici) ile uygulamayı kullanan kişi (Kullanıcı/Ebeveyn) arasında geçerlidir. Uygulamayı indirerek bu şartları kabul etmiş sayılırsınız.</p>
 
       <h3>2. Uygulamanın Amacı</h3>
-      <p>Rüya Masalları; çocuklara özel, yapay zeka destekli kişiselleştirilmiş uyku masalları oluşturan ücretsiz bir Android uygulamasıdır.</p>
+      <p>Rüya Masalları; çocuklara özel, yapay zeka destekli kişiselleştirilmiş masallar oluşturan bir Android uygulamasıdır. Temel özellikler şunlardır:</p>
+      <ul>
+        <li><strong>Kişiselleştirilmiş Masal:</strong> Karakter adı, yaş grubu, tema ve uzunluk seçimiyle özgün masallar üretilir.</li>
+        <li><strong>Özel Gün Masalı:</strong> Doğum günü, ilk okul günü, diş düştü, kardeş oldu gibi özel anlara özel hikayeler oluşturulur.</li>
+        <li><strong>Masal Kütüphanesi:</strong> Oluşturulan masallar kaydedilebilir, favorilere eklenebilir ve PDF olarak dışa aktarılabilir.</li>
+        <li><strong>Sesli Okuma (TTS):</strong> Masallar cihazın metin-okuma motoruyla sesli okunabilir (Premium).</li>
+        <li><strong>Boyama Sayfası:</strong> Her masala özel yapay zeka ile boyama sayfası oluşturulabilir (Premium).</li>
+      </ul>
 
       <h3>3. Ebeveyn Sorumluluğu</h3>
       <div class="child-box">
@@ -360,19 +376,19 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 7 Temmuz 2026</div>
 
       <h3>Kullanılan Teknolojiler</h3>
-      <p>Rüya Masalları ödüllü reklam sistemi için <strong>Google AdMob SDK</strong> kullanmaktadır. Analitik izleme veya kullanıcı profilleme amacıyla başka bir SDK kullanılmaz.</p>
+      <p>Rüya Masalları analitik izleme, reklam veya kullanıcı profilleme amacıyla herhangi bir SDK kullanmaz. <strong>Reklam gösterilmez, reklam kimliği (AAID) toplanmaz.</strong> Yalnızca içerik üretimi ve abonelik yönetimi için aşağıdaki harici servisler kullanılır.</p>
 
-      <h4>Harici Servis 1: Google AdMob</h4>
-      <p>Ödüllü reklamların gösterimi için kullanılır. AdMob, reklam kişiselleştirmesi amacıyla cihazın Advertising ID'sini kullanabilir. Kullanıcı reklamı izlemeden önce reklam başlamaz (isteğe bağlı). Kişiselleştirilmiş reklam tercihleri: Ayarlar → Google → Reklamlar.</p>
-
-      <h4>Harici Servis 2: Google Gemini API</h4>
-      <p>Masal metni üretimi için kullanılır. Seçilen tema, yaş grubu ve karakter adı Google sunucularına iletilir.</p>
+      <h4>Harici Servis 1: Google Gemini API</h4>
+      <p>Masal metni üretimi için kullanılır. Seçilen tema, yaş grubu ve karakter adı Google sunucularına iletilir. Kişisel kimlik bilgisi gönderilmez.</p>
 
       <h4>Harici Servis 2: Pollinations.ai</h4>
       <p>Masal kapak görseli üretimi için kullanılır. Masal teması bu servise iletilir; kişisel bilgi gönderilmez.</p>
+
+      <h4>Harici Servis 3: Google Play Billing</h4>
+      <p>Premium abonelik (aylık/yıllık, otomatik yenilenen) işlemleri için kullanılır. Ödeme bilgileri yalnızca Google tarafından işlenir; geliştirici ödeme bilgilerine erişemez. Abonelik yönetimi için: play.google.com/store/account/subscriptions</p>
 
       <h3>Yerel Depolama</h3>
       <p>Tüm masal içerikleri ve uygulama ayarları Android Room veritabanında yerel olarak saklanır. Bulut yedeklemesi yapılmaz.</p>
@@ -395,7 +411,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 23 Nisan 2026</div>
+      <div class="meta">Son Güncelleme: 7 Temmuz 2026</div>
 
       <h3>Risk Değerlendirmesi</h3>
       <p>Rüya Masalları sunucu tabanlı kullanıcı verisi tutmadığından sunucu taraflı veri ihlali riski yoktur. Tüm veriler cihazda yerel olarak saklanır.</p>
