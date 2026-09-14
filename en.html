@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dream Tales – Legal Information</title>
+<style>
+  :root {
+    --primary: #6a1b9a;
+    --primary-light: #9c27b0;
+    --primary-dark: #4a148c;
+    --accent: #ab47bc;
+    --bg: #f3e5f5;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text2: #4a4a4a;
+    --text3: #757575;
+    --border: #e1bee7;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+    color: white;
+    padding: 32px 20px 28px;
+    text-align: center;
+  }
+  header .emoji { font-size: 48px; margin-bottom: 12px; }
+  header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  header p { font-size: 13px; opacity: 0.85; }
+  nav {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background: #f3e5f5;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  nav a:hover { background: var(--primary); color: white; }
+  main { max-width: 800px; margin: 0 auto; padding: 24px 16px 48px; }
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .section-header h2 { font-size: 16px; font-weight: 700; }
+  .section-header .arrow { font-size: 18px; transition: transform 0.2s; }
+  .section-header.open .arrow { transform: rotate(180deg); }
+  .section-body { padding: 20px; display: none; }
+  .section-body.open { display: block; }
+  h3 { color: var(--primary-dark); font-size: 14px; margin: 18px 0 8px; font-weight: 700; }
+  h4 { color: var(--text2); font-size: 13px; margin: 12px 0 6px; font-weight: 600; }
+  p { margin-bottom: 10px; color: var(--text2); font-size: 14px; }
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  ul li { color: var(--text2); font-size: 14px; margin-bottom: 4px; }
+  .meta {
+    font-size: 12px;
+    color: var(--text3);
+    background: #f3e5f5;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  th {
+    background: #f3e5f5;
+    color: var(--primary-dark);
+    font-weight: 600;
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  td {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    color: var(--text2);
+    vertical-align: top;
+  }
+  .contact-box {
+    background: #f3e5f5;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--primary-dark);
+  }
+  .contact-box strong { display: block; margin-bottom: 4px; }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text3);
+    padding: 24px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .child-box {
+    background: #fff3e0;
+    border: 1px solid #ff9800;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #5d4037;
+    margin: 10px 0;
+  }
+  .child-box strong { color: #e65100; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="emoji">🌙</div>
+  <h1>Dream Tales</h1>
+  <p>Legal Information &amp; Privacy Policy</p>
+</header>
+
+<nav>
+  <a href="#privacy">Privacy Policy</a>
+  <a href="#kvkk">Data Protection Notice</a>
+  <a href="#terms">Terms of Use</a>
+  <a href="#tracking">Tracking Technologies</a>
+  <a href="#breach">Data Breach</a>
+</nav>
+
+<main>
+
+  <!-- PRIVACY POLICY -->
+  <div class="section" id="privacy">
+    <div class="section-header open" onclick="toggle(this)">
+      <h2>🔒 Privacy Policy</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body open">
+      <div class="meta">Last updated: September 14, 2026 &nbsp;|&nbsp; Effective: September 14, 2026</div>
+
+      <div class="child-box">
+        🧒 <strong>Important:</strong> Dream Tales is an app for children. The app does not collect personal data from children. We recommend using it under the supervision of a parent or guardian.
+      </div>
+
+      <h3>1. Data Controller</h3>
+      <p>Dream Tales (Rüya Masalları) is provided by the independent developer <strong>mecinar27</strong>.</p>
+      <div class="contact-box">
+        <strong>Contact:</strong>
+        Email: mecinar27@gmail.com<br>
+        Location: Gaziantep, Türkiye
+      </div>
+
+      <h3>2. Data We Process</h3>
+      <h4>2.1. Local Story Data</h4>
+      <p>Created stories, favorite stories and in-app settings are stored only on your device in a local Room database. This data cannot be accessed remotely and is not uploaded to the cloud.</p>
+      <h4>2.2. AI API Use (Story Creation)</h4>
+      <p>Story creation uses the Google Gemini API. The theme, age group and character name selected by the parent/user, along with any optional names of people, pets or toys to include in the story, are sent to Google servers to generate the story. This data is subject to Google's privacy policy: policies.google.com/privacy</p>
+      <h4>2.3. Images</h4>
+      <p>Story cover images are generated through the Pollinations.ai service. Only the story theme is sent to this service. No personal information is sent.</p>
+      <h4>2.4. Notifications</h4>
+      <p>Bedtime reminder notifications are scheduled locally on the device. No remote push service such as Firebase is used.</p>
+      <h4>2.5. Accounts and Identity</h4>
+      <p>Dream Tales does not require an account. No email address, name or identity information is collected.</p>
+
+      <h3>3. Children's Privacy</h3>
+      <p>The app is designed for children and does not knowingly collect personal data from users under 13. Parents or guardians should avoid entering a child's real name or personal information when creating stories. If such information is entered, it will be sent to the Gemini API.</p>
+
+      <h3>4. Data Sharing</h3>
+      <p>Your personal data is never shared, sold or rented to third parties for commercial purposes. External services are used only for content generation and subscription management. <strong>The app does not show ads.</strong></p>
+
+      <h3>5. Subscriptions and Free Use</h3>
+      <p>Dream Tales uses an <strong>ad-free</strong> freemium model: a free tier and a Premium subscription.</p>
+      <ul>
+        <li>Every user gets <strong>2 free stories per day</strong>.</li>
+        <li><strong>Premium</strong> unlocks 10 stories a day, Special Day Stories, Coloring Pages, read-aloud (TTS), story continuation and all other features.</li>
+        <li>Premium plans: monthly and yearly subscriptions (auto-renewing).</li>
+        <li>Subscriptions are managed by Google Play. Purchases, cancellations and refunds are subject to Google Play's billing policies.</li>
+        <li>Manage your subscription at: <strong>play.google.com/store/account/subscriptions</strong></li>
+      </ul>
+      <p><strong>The app shows no ads and uses no ad SDK, advertising ID (AAID) or tracking technology.</strong> Payments are processed only through Google Play Billing; the developer cannot access your payment information.</p>
+
+      <h3>6. Data Security and Handling of Personal/Sensitive Data</h3>
+      <p>Dream Tales handles personal data (e.g. a child's name) and potentially sensitive data (e.g. behavioral notes entered by a parent) through the following safeguards:</p>
+      <ul>
+        <li><strong>Transport security:</strong> All data sent from your device to our server and AI services is encrypted with HTTPS/TLS. Cleartext connections are not allowed.</li>
+        <li><strong>Purpose limitation:</strong> Personal/sensitive data is processed only to generate the requested story; it is never used for advertising, profiling or sale.</li>
+        <li><strong>Third-party processor:</strong> Data is sent to the Google Gemini API to generate stories. Under Google's standard API terms, submitted content may be used by Google to improve its products. Details: ai.google.dev/gemini-api/terms</li>
+        <li><strong>Local storage security:</strong> Data on the device is kept in Android's protected, app-private (sandboxed) storage; other apps cannot access it.</li>
+        <li><strong>Data minimization:</strong> The app asks only for the minimum information needed to personalize a story; parents can leave the name empty and use the "Random" option without entering any personal data.</li>
+        <li><strong>Server-side access restriction:</strong> Our own server (Google Apps Script) keeps only a daily usage counter linked to a device ID; only the developer can access it, and it is deleted within 30 days on request.</li>
+      </ul>
+
+      <h3>7. Deleting Data</h3>
+      <p>Stories can be deleted one by one inside the app. To delete all data, go to Settings → Apps → Dream Tales → Clear data.</p>
+
+      <div class="contact-box">
+        Questions: <strong>mecinar27@gmail.com</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- KVKK -->
+  <div class="section" id="kvkk">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📋 Data Protection Notice (KVKK)</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Under Turkish Personal Data Protection Law No. 6698 (KVKK) | Last updated: September 14, 2026</div>
+
+      <h3>Data Controller</h3>
+      <p><strong>Name:</strong> mecinar27 (Independent Developer)<br>
+      <strong>Email:</strong> mecinar27@gmail.com<br>
+      <strong>Location:</strong> Gaziantep, Türkiye</p>
+
+      <h3>Personal Data Processed</h3>
+      <table>
+        <tr>
+          <th>Data Category</th>
+          <th>Data Processed</th>
+          <th>Legal Basis</th>
+          <th>Retention</th>
+        </tr>
+        <tr>
+          <td>Story Content</td>
+          <td>Theme, age group, character name and optional names of people/toys in the story</td>
+          <td>Performance of contract</td>
+          <td>On device – until deleted by the user</td>
+        </tr>
+        <tr>
+          <td>AI API Content</td>
+          <td>Story parameters (Gemini API)</td>
+          <td>Explicit consent</td>
+          <td>Subject to Google's policy</td>
+        </tr>
+        <tr>
+          <td>Images</td>
+          <td>Story theme for the cover image (Pollinations.ai)</td>
+          <td>Explicit consent</td>
+          <td>Subject to Pollinations.ai's policy</td>
+        </tr>
+        <tr>
+          <td>Subscription Data</td>
+          <td>Purchase token, subscription status (Google Play Billing)</td>
+          <td>Performance of contract</td>
+          <td>Subject to Google Play's policy</td>
+        </tr>
+        <tr>
+          <td>Story Credits</td>
+          <td>Daily usage counter (local)</td>
+          <td>Performance of contract</td>
+          <td>On device – until the app is uninstalled</td>
+        </tr>
+      </table>
+
+      <h3>Children's Data</h3>
+      <div class="child-box">
+        🧒 The app is designed for children and does not collect personal data from children under 13. Parents/guardians are responsible for making sure a child's personal information is not entered into story parameters. Parental consent is required for processing any data about a child.
+      </div>
+
+      <h3>International Data Transfers</h3>
+      <p>The Gemini API (Google LLC, USA) and Pollinations.ai are used to generate stories. These transfers are carried out with appropriate safeguards under Article 9 of KVKK.</p>
+
+      <h3>Your Rights</h3>
+      <ul>
+        <li>Learn whether your personal data is processed</li>
+        <li>Request information if it has been processed</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion when the legal conditions are met</li>
+        <li>Object to processing</li>
+        <li>Claim compensation for damages</li>
+      </ul>
+
+      <h3>How to Apply</h3>
+      <p>To exercise your rights, email <strong>mecinar27@gmail.com</strong>. Requests are answered free of charge within 30 days.</p>
+    </div>
+  </div>
+
+  <!-- TERMS OF USE -->
+  <div class="section" id="terms">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📄 Terms of Use</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Last updated: September 14, 2026</div>
+
+      <h3>1. Parties and Scope</h3>
+      <p>These terms apply between mecinar27 (the Developer), who provides the <strong>Dream Tales</strong> app, and the person using the app (the User/Parent). By downloading the app, you agree to these terms.</p>
+
+      <h3>2. Purpose of the App</h3>
+      <p>Dream Tales is an Android app that creates personalized, AI-powered stories for children. Key features:</p>
+      <ul>
+        <li><strong>Personalized Stories:</strong> Unique stories based on character name, age group, theme and length.</li>
+        <li><strong>Special Day Stories:</strong> Stories for special moments such as birthdays, the first day of school, losing a tooth or a new sibling.</li>
+        <li><strong>Story Library:</strong> Created stories can be saved, added to favorites and exported as PDF.</li>
+        <li><strong>Read-Aloud (TTS):</strong> Stories can be read aloud with the device's text-to-speech engine (Premium).</li>
+        <li><strong>Coloring Pages:</strong> An AI-generated coloring page can be created for each story (Premium).</li>
+      </ul>
+
+      <h3>3. Parental Responsibility</h3>
+      <div class="child-box">
+        🧒 <strong>Parent/Guardian Obligations:</strong>
+        <ul style="margin-top:8px">
+          <li>Children under 13 should use the app under parental supervision.</li>
+          <li>Do not enter a child's real name, school name or other personal information when creating stories.</li>
+          <li>Parents are responsible for making sure story content is suitable for their child.</li>
+        </ul>
+      </div>
+
+      <h3>4. AI-Generated Content</h3>
+      <p>Stories are generated automatically by the Google Gemini API. The content carries no religious, moral or educational authority. Parents are responsible for judging whether generated content is suitable for their child. Please report any inappropriate content to mecinar27@gmail.com.</p>
+
+      <h3>5. Images</h3>
+      <p>Story images are generated by the Pollinations.ai service. The images are AI-generated and do not depict real people or copyrighted characters.</p>
+
+      <h3>6. Conditions of Use</h3>
+      <ul>
+        <li>The app may be used for personal and educational purposes only.</li>
+        <li>Generated stories may not be used or distributed commercially.</li>
+        <li>Reverse engineering the app is prohibited.</li>
+      </ul>
+
+      <h3>7. Limitation of Liability</h3>
+      <p>The app is provided "as is". The accuracy or suitability of AI-generated content is not guaranteed. The developer is not liable for damages arising from API outages, translation errors or content inaccuracies.</p>
+
+      <h3>8. Intellectual Property</h3>
+      <p>The app's design and software components belong to mecinar27. AI-generated story content belongs to the user; however, commercial use rights are reserved.</p>
+
+      <h3>9. Governing Law</h3>
+      <p>These terms are governed by the laws of the Republic of Türkiye. The courts and consumer arbitration committees of Gaziantep have jurisdiction over disputes.</p>
+
+      <div class="contact-box">
+        Contact: <strong>mecinar27@gmail.com</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACKING TECHNOLOGIES -->
+  <div class="section" id="tracking">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>📡 Tracking Technologies Policy</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Last updated: September 14, 2026</div>
+
+      <h3>Technologies Used</h3>
+      <p>Dream Tales does not use any SDK for analytics tracking, advertising or user profiling. <strong>No ads are shown and no advertising ID (AAID) is collected.</strong> Only the following external services are used, for content generation and subscription management.</p>
+
+      <h4>External Service 1: Google Gemini API</h4>
+      <p>Used to generate story text. The selected theme, age group and character name are sent to Google servers. No personal identity information is sent.</p>
+
+      <h4>External Service 2: Pollinations.ai</h4>
+      <p>Used to generate story cover images. The story theme is sent to this service; no personal information is sent.</p>
+
+      <h4>External Service 3: Google Play Billing</h4>
+      <p>Used for Premium subscription (monthly/yearly, auto-renewing) purchases. Payment information is processed only by Google; the developer cannot access it. Manage your subscription at: play.google.com/store/account/subscriptions</p>
+
+      <h3>Local Storage</h3>
+      <p>All story content and app settings are stored locally in an Android Room database. No cloud backup is made.</p>
+
+      <h3>Notifications</h3>
+      <p>Bedtime reminders are scheduled as local notifications. Firebase or other remote push services are not used.</p>
+
+      <h3>Controls and Preferences</h3>
+      <ul>
+        <li>Notification permission: Device Settings → Notifications → Dream Tales</li>
+        <li>All app data: Settings → Apps → Dream Tales → Clear data</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DATA BREACH -->
+  <div class="section" id="breach">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>🛡️ Data Breach Notice</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">Last updated: September 14, 2026</div>
+
+      <h3>Risk Assessment</h3>
+      <p>Because Dream Tales does not keep user data on a server, there is no risk of a server-side data breach. All data is stored locally on the device.</p>
+
+      <h3>Extra Care for Children's Data</h3>
+      <div class="child-box">
+        🧒 The app is designed for children. If a breach involving a child's data is ever suspected, the parent/guardian is informed first.
+      </div>
+
+      <h3>Possible Risks</h3>
+      <ul>
+        <li>Unauthorized physical access to the device</li>
+        <li>A breach originating from the Gemini API or Pollinations.ai</li>
+      </ul>
+
+      <h3>Notification Process</h3>
+      <p>In the event of a breach, affected users are informed as soon as possible and the Turkish Personal Data Protection Authority (KVKK) is notified within the required time.</p>
+
+      <h3>Security Reports</h3>
+      <div class="contact-box">
+        <strong>Report a vulnerability:</strong> mecinar27@gmail.com<br>
+        Subject: Security Vulnerability – Dream Tales<br>
+        Response time: 48 hours
+      </div>
+
+      <h3>Data Protection Authority</h3>
+      <div class="contact-box">
+        <strong>Personal Data Protection Authority (KVKK)</strong><br>
+        Necatibey Cad. No:114 Sıhhiye/Çankaya/ANKARA, Türkiye<br>
+        Tel: +90 312 967 88 00 | Web: www.kvkk.gov.tr
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 mecinar27. All rights reserved.</p>
+  <p style="margin-top:6px">These documents apply to the Dream Tales app.</p>
+  <p style="margin-top:6px">Contact: mecinar27@gmail.com</p>
+</footer>
+
+<script>
+  function toggle(header) {
+    header.classList.toggle('open');
+    const body = header.nextElementSibling;
+    body.classList.toggle('open');
+  }
+  document.querySelectorAll('.section-body').forEach((b, i) => {
+    if (i === 0) b.classList.add('open');
+  });
+</script>
+</body>
+</html>
