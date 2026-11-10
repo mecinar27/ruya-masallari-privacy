@@ -169,10 +169,10 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body open">
-      <div class="meta">Son Güncelleme: 1 Kasım 2026 &nbsp;|&nbsp; Yürürlük: 1 Kasım 2026</div>
+      <div class="meta">Son Güncelleme: 11 Kasım 2026 &nbsp;|&nbsp; Yürürlük: 11 Kasım 2026</div>
 
       <div class="child-box">
-        🧒 <strong>Önemli Not:</strong> Rüya Masalları çocuklara yönelik bir uygulamadır. Uygulama çocuklardan kişisel veri toplamaz. Ebeveyn veya vasisin gözetiminde kullanılması tavsiye edilir.
+        🧒 <strong>Önemli Not:</strong> Rüya Masalları çocuklara yönelik bir uygulamadır. Uygulama çocuklardan doğrudan kişisel veri toplamaz; hesap açılmaz, reklam ve izleme yoktur. Masalı kişiselleştirmek için ebeveynin girdiği bilgiler aşağıda açıklandığı şekilde işlenir. Ebeveyn veya vasinin gözetiminde kullanılması tavsiye edilir.
       </div>
 
       <h3>1. Veri Sorumlusu</h3>
@@ -187,18 +187,29 @@
       <h4>2.1. Yerel Masal Verileri</h4>
       <p>Oluşturulan masallar, favori masallar ve uygulama içi ayarlar yalnızca cihazınızdaki Room veritabanında yerel olarak saklanır. Bu verilere uzaktan erişilemez, buluta yüklenmez.</p>
       <h4>2.2. Yapay Zeka API Kullanımı (Masal Oluşturma)</h4>
-      <p>Masal oluşturma özelliği Google Gemini API kullanmaktadır. Ebeveyn/kullanıcı tarafından seçilen tema, yaş grubu ve karakter adı ile isteğe bağlı olarak girilen, masalda yer alması istenen kişi, evcil hayvan veya oyuncak adları masal üretimi amacıyla Google sunucularına iletilir. Bu veriler Google'ın gizlilik politikasına tabidir: policies.google.com/privacy</p>
+      <p>Masal oluşturma isteği, geliştiricinin Google Apps Script üzerinde çalışan sunucusu aracılığıyla Google Gemini API'ye iletilir. Bu amaçla şu bilgiler gönderilir:</p>
+      <ul>
+        <li>Seçilen tema, yaş grubu, masal uzunluğu, masal dili ve masal modu;</li>
+        <li>Karakter adı ile isteğe bağlı olarak girdiğiniz, masalda yer alması istenen kişi, evcil hayvan veya oyuncak adları;</li>
+        <li>Ebeveyn Kontrolü'nde isteğe bağlı olarak girdiğiniz davranış notu, kullanılmaması istenen kelimeler, oyuncak tarifi ve kahramanın çizimlerdeki görünüşü;</li>
+        <li>Bir masalı devam ettirdiğinizde önceki masalın başlığı, kısa özeti ve çocuğun yaptığı seçim.</li>
+      </ul>
+      <p>Bu bilgiler yalnızca istenen masalı üretmek için kullanılır ve sunucumuzda saklanmaz. Google'a iletilen veriler Google'ın gizlilik politikasına tabidir: policies.google.com/privacy</p>
+      <h4>2.2.1. Cihaz Kimliği ve Günlük Kota</h4>
+      <p>Günlük masal hakkını uygulayabilmek için cihazınızın uygulamaya özel Android kimliği (Android ID) masal isteğiyle birlikte sunucumuza gönderilir. Sunucuda yalnızca bu kimliğe bağlı günlük kullanım sayısı tutulur; sayaç bir sonraki gün otomatik olarak silinir. Cihaz kimliği Gemini API'ye veya görsel servisine iletilmez; reklam, profilleme ya da izleme amacıyla kullanılmaz.</p>
       <h4>2.3. Görsel İçerik</h4>
-      <p>Masal kapak görselleri Pollinations.ai servisi aracılığıyla oluşturulur. İçerik üretimi için belirlenen masal teması bu servise iletilir. Kişisel bilgi gönderilmez.</p>
+      <p>Masalın kapak görseli, sayfa görselleri ve boyama sayfası Pollinations.ai servisi aracılığıyla oluşturulur. Bu servise yalnızca çizilecek sahnenin yapay zekâ tarafından yazılmış İngilizce tarifi ve masal teması iletilir. <strong>Çocuğun adı bu tariflerden çıkarılır ve görsel servisine gönderilmez.</strong></p>
+      <p>Ebeveyn Kontrolü'ndeki "kahramanın çizimlerdeki görünüşü" alanını doldurduysanız (ör. saç rengi, gözlük, kıyafet), çizimlerin birbiriyle tutarlı olması için bu tarif de sahne tarifine eklenir. Bu alan isteğe bağlıdır; uygulama fotoğraf istemez ve yüklemez.</p>
+      <p>Görseller cihazınıza indirilir ve cihazda önbelleğe alınır. Her internet bağlantısında olduğu gibi, Google ve Pollinations.ai sunucuları isteği yapan IP adresini teknik olarak görür.</p>
       <h4>2.3.1. QR Kodları</h4>
       <p>Masal paylaşımında kullanılan QR kodları tamamen cihazınızda üretilir. Masal metni, karakter adı veya başka hiçbir veri QR üretimi için herhangi bir sunucuya gönderilmez.</p>
       <h4>2.4. Bildirimler</h4>
       <p>Yatma vakti hatırlatma bildirimleri yerel olarak planlanır. Firebase gibi uzak push bildirim servisi kullanılmaz.</p>
       <h4>2.5. Hesap ve Kimlik Bilgisi</h4>
-      <p>Rüya Masalları hesap oluşturma gerektirmez. E-posta adresi, isim veya kimlik bilgisi toplanmaz.</p>
+      <p>Rüya Masalları hesap oluşturma gerektirmez. Hesap için e-posta adresi, ad-soyad veya kimlik bilgisi istenmez.</p>
 
       <h3>3. Çocukların Gizliliği</h3>
-      <p>Uygulama çocuklara yönelik olup 13 yaş altı kullanıcıların kişisel verilerini bilinçli olarak toplamaz. Ebeveyn veya vasi masal oluşturma sırasında çocuğun gerçek adı veya kişisel bilgilerini girmemeye özen göstermelidir. Bu tür bilgilerin girilmesi halinde Gemini API'ye iletilecektir.</p>
+      <p>Uygulama çocuklara yönelik olup 13 yaş altı kullanıcıların kişisel verilerini bilinçli olarak toplamaz. Ebeveyn veya vasi masal oluşturma sırasında çocuğun gerçek adı yerine bir takma ad kullanabilir ya da ad alanını boş bırakabilir; çocuğa ait başka kişisel bilgileri girmemeye özen göstermelidir. Girilen ad ve bilgiler masal metnini üretmek için Gemini API'ye iletilir; çocuğun adı görsel servisine iletilmez.</p>
 
       <h3>4. Veri Paylaşımı</h3>
       <p>Kişisel verileriniz hiçbir üçüncü tarafla ticari amaçla paylaşılmaz, satılmaz veya kiralanmaz. Harici servisler yalnızca içerik üretimi ve abonelik yönetimi amacıyla kullanılır. <strong>Uygulama reklam göstermez.</strong></p>
@@ -222,11 +233,11 @@
         <li><strong>Üçüncü Taraf İşleyici:</strong> Masal üretimi için veriler Google Gemini API'ye iletilir. Google'ın standart API şartları kapsamında gönderilen içerik, Google tarafından ürün geliştirme amacıyla kullanılabilir. Detaylar için: ai.google.dev/gemini-api/terms</li>
         <li><strong>Yerel Depolama Güvenliği:</strong> Cihazda tutulan veriler Android'in uygulamaya özel, korumalı (sandboxed) depolama alanında saklanır; başka uygulamalar bu verilere erişemez.</li>
         <li><strong>Asgari Veri Toplama:</strong> Uygulama yalnızca masalı kişiselleştirmek için gerekli asgari bilgiyi ister; ebeveynler isim alanını boş bırakıp "Rastgele" seçeneğiyle hiç kişisel veri girmeden uygulamayı kullanabilir.</li>
-        <li><strong>Sunucu Tarafı Erişim Kısıtlaması:</strong> Kendi sunucumuzda (Google Apps Script) yalnızca cihaz kimliğine bağlı günlük kullanım sayacı tutulur; bu veriye yalnızca geliştirici erişebilir ve talep üzerine 30 gün içinde silinir.</li>
+        <li><strong>Sunucu Tarafı Erişim Kısıtlaması:</strong> Kendi sunucumuzda (Google Apps Script) yalnızca cihaz kimliğine bağlı günlük kullanım sayacı tutulur; masal içeriği veya girdiğiniz bilgiler saklanmaz. Sayaç bir sonraki gün otomatik olarak silinir ve bu veriye yalnızca geliştirici erişebilir.</li>
       </ul>
 
       <h3>7. Veri Silme</h3>
-      <p>Uygulama içinden masallar tek tek silinebilir. Tüm verileri silmek için Ayarlar → Uygulama Yönetimi → Rüya Masalları → Veri Temizle yolu kullanılabilir.</p>
+      <p>Uygulama içinden masallar tek tek silinebilir. Tüm verileri silmek için Ayarlar → Uygulama Yönetimi → Rüya Masalları → Veri Temizle yolu kullanılabilir. Sunucudaki günlük kullanım sayacı bir sonraki gün kendiliğinden silinir; daha erken silinmesini isterseniz mecinar27@gmail.com adresine yazabilirsiniz.</p>
 
       <div class="contact-box">
         Sorularınız için: <strong>mecinar27@gmail.com</strong>
@@ -241,7 +252,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 1 Kasım 2026</div>
+      <div class="meta">6698 Sayılı Kişisel Verilerin Korunması Kanunu Uyarınca | Son Güncelleme: 11 Kasım 2026</div>
 
       <h3>Veri Sorumlusu</h3>
       <p><strong>Unvan:</strong> mecinar27 (Bağımsız Geliştirici)<br>
@@ -258,7 +269,7 @@
         </tr>
         <tr>
           <td>Masal İçeriği</td>
-          <td>Tema, yaş grubu, karakter adı ve isteğe bağlı masaldaki kişi/oyuncak adları</td>
+          <td>Tema, yaş grubu, karakter adı; isteğe bağlı olarak masaldaki kişi/oyuncak adları, ebeveyn notları ve kahramanın görünüş tarifi</td>
           <td>Sözleşmenin İfası</td>
           <td>Cihazda – kullanıcı silinceye kadar</td>
         </tr>
@@ -270,7 +281,7 @@
         </tr>
         <tr>
           <td>Görsel İçerik</td>
-          <td>Masal görseli için tema (Pollinations.ai)</td>
+          <td>Görseller için sahne tarifi, tema ve isteğe bağlı görünüş tarifi (Pollinations.ai) – çocuğun adı gönderilmez</td>
           <td>Açık Rıza</td>
           <td>Pollinations.ai politikasına tabi</td>
         </tr>
@@ -282,9 +293,9 @@
         </tr>
         <tr>
           <td>Masal Hakkı</td>
-          <td>Günlük kullanım sayacı (yerel)</td>
+          <td>Cihaz kimliği (Android ID) ve günlük kullanım sayacı</td>
           <td>Sözleşmenin İfası</td>
-          <td>Cihazda – uygulama kaldırılana kadar</td>
+          <td>Cihazda – uygulama kaldırılana kadar; sunucuda – bir sonraki güne kadar</td>
         </tr>
       </table>
 
@@ -294,7 +305,7 @@
       </div>
 
       <h3>Yurt Dışı Veri Aktarımı</h3>
-      <p>Masal üretimi için Gemini API (Google LLC, ABD) ve Pollinations.ai kullanılmaktadır. Bu aktarımlar KVKK'nın 9. maddesi kapsamında uygun güvenlik önlemleri alınarak gerçekleştirilir.</p>
+      <p>Masal üretimi için Google Apps Script ve Gemini API (Google LLC, ABD), görsel üretimi için Pollinations.ai (yurt dışı) kullanılmaktadır. Bu aktarımlar KVKK'nın 9. maddesi kapsamında uygun güvenlik önlemleri alınarak gerçekleştirilir.</p>
 
       <h3>KVKK Kapsamındaki Haklarınız</h3>
       <ul>
@@ -318,7 +329,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 1 Kasım 2026</div>
+      <div class="meta">Son Güncelleme: 11 Kasım 2026</div>
 
       <h3>1. Taraflar ve Kapsam</h3>
       <p>Bu kullanım şartları, <strong>Rüya Masalları</strong> uygulamasını sunan mecinar27 (Geliştirici) ile uygulamayı kullanan kişi (Kullanıcı/Ebeveyn) arasında geçerlidir. Uygulamayı indirerek bu şartları kabul etmiş sayılırsınız.</p>
@@ -328,7 +339,9 @@
       <ul>
         <li><strong>Kişiselleştirilmiş Masal:</strong> Karakter adı, yaş grubu, tema ve uzunluk seçimiyle özgün masallar üretilir.</li>
         <li><strong>Özel Gün Masalı:</strong> Doğum günü, ilk okul günü, diş düştü, kardeş oldu gibi özel anlara özel hikayeler oluşturulur.</li>
-        <li><strong>Masal Kütüphanesi:</strong> Oluşturulan masallar kaydedilebilir, favorilere eklenebilir ve PDF olarak dışa aktarılabilir.</li>
+        <li><strong>Masal Kütüphanesi:</strong> Oluşturulan masallar kaydedilebilir, favorilere eklenebilir ve cihazınızda oluşturulan resimli PDF olarak dışa aktarılabilir.</li>
+        <li><strong>Sayfa Görselleri:</strong> Masalın sayfaları için sahneye uygun görseller oluşturulur. Ücretsiz görsel servisinin hız sınırı nedeniyle görseller sırayla yüklenir ve her zaman hazır olmayabilir.</li>
+        <li><strong>Seçimli Devam:</strong> Masalın sonunda çocuğun yaptığı seçime göre devam masalı oluşturulabilir (Premium).</li>
         <li><strong>Sesli Okuma (TTS):</strong> Masallar cihazın metin-okuma motoruyla sesli okunabilir (Premium).</li>
         <li><strong>Boyama Sayfası:</strong> Her masala özel yapay zeka ile boyama sayfası oluşturulabilir (Premium).</li>
       </ul>
@@ -390,16 +403,16 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 1 Kasım 2026</div>
+      <div class="meta">Son Güncelleme: 11 Kasım 2026</div>
 
       <h3>Kullanılan Teknolojiler</h3>
       <p>Rüya Masalları analitik izleme, reklam veya kullanıcı profilleme amacıyla herhangi bir SDK kullanmaz. <strong>Reklam gösterilmez, reklam kimliği (AAID) toplanmaz.</strong> Yalnızca içerik üretimi ve abonelik yönetimi için aşağıdaki harici servisler kullanılır.</p>
 
       <h4>Harici Servis 1: Google Gemini API</h4>
-      <p>Masal metni üretimi için kullanılır. Seçilen tema, yaş grubu ve karakter adı Google sunucularına iletilir. Kişisel kimlik bilgisi gönderilmez.</p>
+      <p>Masal metni üretimi için kullanılır. Gizlilik Politikası'nın 2.2. maddesinde sayılan masal bilgileri, sunucumuz (Google Apps Script) üzerinden Google'a iletilir. Cihaz kimliği Gemini API'ye gönderilmez.</p>
 
       <h4>Harici Servis 2: Pollinations.ai</h4>
-      <p>Masal kapak görseli üretimi için kullanılır. Masal teması bu servise iletilir; kişisel bilgi gönderilmez.</p>
+      <p>Masal kapağı, sayfa görselleri ve boyama sayfası üretimi için kullanılır. Sahne tarifi, masal teması ve isteğe bağlı görünüş tarifi iletilir; çocuğun adı gönderilmez.</p>
 
       <h4>Harici Servis 3: Google Play Billing</h4>
       <p>Premium abonelik (aylık/yıllık, otomatik yenilenen) işlemleri için kullanılır. Ödeme bilgileri yalnızca Google tarafından işlenir; geliştirici ödeme bilgilerine erişemez. Abonelik yönetimi için: play.google.com/store/account/subscriptions</p>
@@ -425,10 +438,10 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Son Güncelleme: 1 Kasım 2026</div>
+      <div class="meta">Son Güncelleme: 11 Kasım 2026</div>
 
       <h3>Risk Değerlendirmesi</h3>
-      <p>Rüya Masalları sunucu tabanlı kullanıcı verisi tutmadığından sunucu taraflı veri ihlali riski yoktur. Tüm veriler cihazda yerel olarak saklanır.</p>
+      <p>Sunucumuzda masal içeriği veya kişisel bilgi saklanmaz; yalnızca cihaz kimliğine bağlı günlük kullanım sayacı en fazla bir gün tutulur. Diğer tüm veriler cihazda yerel olarak saklanır. Bu nedenle sunucu taraflı veri ihlali riski çok sınırlıdır.</p>
 
       <h3>Çocuk Verilerinde Ekstra Önlem</h3>
       <div class="child-box">

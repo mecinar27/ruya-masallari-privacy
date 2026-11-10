@@ -169,10 +169,10 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body open">
-      <div class="meta">Last updated: November 1, 2026 &nbsp;|&nbsp; Effective: November 1, 2026</div>
+      <div class="meta">Last updated: November 11, 2026 &nbsp;|&nbsp; Effective: November 11, 2026</div>
 
       <div class="child-box">
-        🧒 <strong>Important:</strong> Dream Tales is an app for children. The app does not collect personal data from children. We recommend using it under the supervision of a parent or guardian.
+        🧒 <strong>Important:</strong> Dream Tales is an app for children. The app does not collect personal data directly from children; there are no accounts, ads or tracking. Information a parent enters to personalize a story is processed as described below. We recommend using the app under the supervision of a parent or guardian.
       </div>
 
       <h3>1. Data Controller</h3>
@@ -187,18 +187,29 @@
       <h4>2.1. Local Story Data</h4>
       <p>Created stories, favorite stories and in-app settings are stored only on your device in a local Room database. This data cannot be accessed remotely and is not uploaded to the cloud.</p>
       <h4>2.2. AI API Use (Story Creation)</h4>
-      <p>Story creation uses the Google Gemini API. The theme, age group and character name selected by the parent/user, along with any optional names of people, pets or toys to include in the story, are sent to Google servers to generate the story. This data is subject to Google's privacy policy: policies.google.com/privacy</p>
+      <p>A story request is sent to the Google Gemini API through the developer's server, which runs on Google Apps Script. The following information is sent for this purpose:</p>
+      <ul>
+        <li>The selected theme, age group, story length, story language and story mode;</li>
+        <li>The character name and any optional names of people, pets or toys you ask to include in the story;</li>
+        <li>Anything you optionally enter in Parental Controls: a behavior note, words to avoid, a toy description and the hero's look in illustrations;</li>
+        <li>When you continue a story: the previous story's title, a short summary of it and the choice the child made.</li>
+      </ul>
+      <p>This information is used only to generate the requested story and is not stored on our server. Data sent to Google is subject to Google's privacy policy: policies.google.com/privacy</p>
+      <h4>2.2.1. Device ID and Daily Quota</h4>
+      <p>To enforce the daily story limit, your device's app-specific Android ID is sent to our server with each story request. The server keeps only a daily usage count linked to this ID; the counter is deleted automatically the following day. The device ID is not sent to the Gemini API or to the image service, and is not used for advertising, profiling or tracking.</p>
       <h4>2.3. Images</h4>
-      <p>Story cover images are generated through the Pollinations.ai service. Only the story theme is sent to this service. No personal information is sent.</p>
+      <p>The story's cover image, page images and coloring page are generated through the Pollinations.ai service. Only an AI-written English description of the scene to draw and the story theme are sent to this service. <strong>The child's name is removed from these descriptions and is not sent to the image service.</strong></p>
+      <p>If you filled in the optional "hero's look in illustrations" field in Parental Controls (for example hair color, glasses, clothing), that description is added to the scene description so the illustrations stay consistent. The app does not ask for or upload photos.</p>
+      <p>Images are downloaded to your device and cached there. As with any internet connection, Google and Pollinations.ai servers technically see the IP address the request comes from.</p>
       <h4>2.3.1. QR Codes</h4>
       <p>QR codes used for sharing stories are generated entirely on your device. No story text, character name or any other data is sent to any server to create them.</p>
       <h4>2.4. Notifications</h4>
       <p>Bedtime reminder notifications are scheduled locally on the device. No remote push service such as Firebase is used.</p>
       <h4>2.5. Accounts and Identity</h4>
-      <p>Dream Tales does not require an account. No email address, name or identity information is collected.</p>
+      <p>Dream Tales does not require an account. No email address, full name or identity information is requested for an account.</p>
 
       <h3>3. Children's Privacy</h3>
-      <p>The app is designed for children and does not knowingly collect personal data from users under 13. Parents or guardians should avoid entering a child's real name or personal information when creating stories. If such information is entered, it will be sent to the Gemini API.</p>
+      <p>The app is designed for children and does not knowingly collect personal data from users under 13. When creating stories, parents or guardians can use a nickname instead of the child's real name or leave the name field empty, and should avoid entering other personal information about the child. Any name or information entered is sent to the Gemini API to generate the story text; the child's name is not sent to the image service.</p>
 
       <h3>4. Data Sharing</h3>
       <p>Your personal data is never shared, sold or rented to third parties for commercial purposes. External services are used only for content generation and subscription management. <strong>The app does not show ads.</strong></p>
@@ -222,11 +233,11 @@
         <li><strong>Third-party processor:</strong> Data is sent to the Google Gemini API to generate stories. Under Google's standard API terms, submitted content may be used by Google to improve its products. Details: ai.google.dev/gemini-api/terms</li>
         <li><strong>Local storage security:</strong> Data on the device is kept in Android's protected, app-private (sandboxed) storage; other apps cannot access it.</li>
         <li><strong>Data minimization:</strong> The app asks only for the minimum information needed to personalize a story; parents can leave the name empty and use the "Random" option without entering any personal data.</li>
-        <li><strong>Server-side access restriction:</strong> Our own server (Google Apps Script) keeps only a daily usage counter linked to a device ID; only the developer can access it, and it is deleted within 30 days on request.</li>
+        <li><strong>Server-side access restriction:</strong> Our own server (Google Apps Script) keeps only a daily usage counter linked to a device ID; story content and the information you enter are not stored. The counter is deleted automatically the following day, and only the developer can access it.</li>
       </ul>
 
       <h3>7. Deleting Data</h3>
-      <p>Stories can be deleted one by one inside the app. To delete all data, go to Settings → Apps → Dream Tales → Clear data.</p>
+      <p>Stories can be deleted one by one inside the app. To delete all data, go to Settings → Apps → Dream Tales → Clear data. The daily usage counter on the server deletes itself the following day; if you want it removed sooner, write to mecinar27@gmail.com.</p>
 
       <div class="contact-box">
         Questions: <strong>mecinar27@gmail.com</strong>
@@ -241,7 +252,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Under Turkish Personal Data Protection Law No. 6698 (KVKK) | Last updated: November 1, 2026</div>
+      <div class="meta">Under Turkish Personal Data Protection Law No. 6698 (KVKK) | Last updated: November 11, 2026</div>
 
       <h3>Data Controller</h3>
       <p><strong>Name:</strong> mecinar27 (Independent Developer)<br>
@@ -258,7 +269,7 @@
         </tr>
         <tr>
           <td>Story Content</td>
-          <td>Theme, age group, character name and optional names of people/toys in the story</td>
+          <td>Theme, age group, character name; optionally names of people/toys in the story, parent notes and the hero's look description</td>
           <td>Performance of contract</td>
           <td>On device – until deleted by the user</td>
         </tr>
@@ -270,7 +281,7 @@
         </tr>
         <tr>
           <td>Images</td>
-          <td>Story theme for the cover image (Pollinations.ai)</td>
+          <td>Scene description, theme and optional look description for images (Pollinations.ai) – the child's name is not sent</td>
           <td>Explicit consent</td>
           <td>Subject to Pollinations.ai's policy</td>
         </tr>
@@ -282,9 +293,9 @@
         </tr>
         <tr>
           <td>Story Credits</td>
-          <td>Daily usage counter (local)</td>
+          <td>Device ID (Android ID) and daily usage counter</td>
           <td>Performance of contract</td>
-          <td>On device – until the app is uninstalled</td>
+          <td>On device – until the app is uninstalled; on the server – until the following day</td>
         </tr>
       </table>
 
@@ -294,7 +305,7 @@
       </div>
 
       <h3>International Data Transfers</h3>
-      <p>The Gemini API (Google LLC, USA) and Pollinations.ai are used to generate stories. These transfers are carried out with appropriate safeguards under Article 9 of KVKK.</p>
+      <p>Google Apps Script and the Gemini API (Google LLC, USA) are used to generate stories, and Pollinations.ai (outside Türkiye) is used to generate images. These transfers are carried out with appropriate safeguards under Article 9 of KVKK.</p>
 
       <h3>Your Rights</h3>
       <ul>
@@ -318,7 +329,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Last updated: November 1, 2026</div>
+      <div class="meta">Last updated: November 11, 2026</div>
 
       <h3>1. Parties and Scope</h3>
       <p>These terms apply between mecinar27 (the Developer), who provides the <strong>Dream Tales</strong> app, and the person using the app (the User/Parent). By downloading the app, you agree to these terms.</p>
@@ -328,7 +339,9 @@
       <ul>
         <li><strong>Personalized Stories:</strong> Unique stories based on character name, age group, theme and length.</li>
         <li><strong>Special Day Stories:</strong> Stories for special moments such as birthdays, the first day of school, losing a tooth or a new sibling.</li>
-        <li><strong>Story Library:</strong> Created stories can be saved, added to favorites and exported as PDF.</li>
+        <li><strong>Story Library:</strong> Created stories can be saved, added to favorites and exported as an illustrated PDF created on your device.</li>
+        <li><strong>Page Images:</strong> Scene-matched images are generated for the story's pages. Because of the free image service's rate limit, images load one at a time and may not always be available.</li>
+        <li><strong>Choose What Happens Next:</strong> A continuation can be created based on the choice the child makes at the end of a story (Premium).</li>
         <li><strong>Read-Aloud (TTS):</strong> Stories can be read aloud with the device's text-to-speech engine (Premium).</li>
         <li><strong>Coloring Pages:</strong> An AI-generated coloring page can be created for each story (Premium).</li>
       </ul>
@@ -390,16 +403,16 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Last updated: November 1, 2026</div>
+      <div class="meta">Last updated: November 11, 2026</div>
 
       <h3>Technologies Used</h3>
       <p>Dream Tales does not use any SDK for analytics tracking, advertising or user profiling. <strong>No ads are shown and no advertising ID (AAID) is collected.</strong> Only the following external services are used, for content generation and subscription management.</p>
 
       <h4>External Service 1: Google Gemini API</h4>
-      <p>Used to generate story text. The selected theme, age group and character name are sent to Google servers. No personal identity information is sent.</p>
+      <p>Used to generate story text. The story information listed in section 2.2 of the Privacy Policy is sent to Google through our server (Google Apps Script). The device ID is not sent to the Gemini API.</p>
 
       <h4>External Service 2: Pollinations.ai</h4>
-      <p>Used to generate story cover images. The story theme is sent to this service; no personal information is sent.</p>
+      <p>Used to generate the story cover, page images and coloring page. The scene description, story theme and optional look description are sent; the child's name is not sent.</p>
 
       <h4>External Service 3: Google Play Billing</h4>
       <p>Used for Premium subscription (monthly/yearly, auto-renewing) purchases. Payment information is processed only by Google; the developer cannot access it. Manage your subscription at: play.google.com/store/account/subscriptions</p>
@@ -425,10 +438,10 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Last updated: November 1, 2026</div>
+      <div class="meta">Last updated: November 11, 2026</div>
 
       <h3>Risk Assessment</h3>
-      <p>Because Dream Tales does not keep user data on a server, there is no risk of a server-side data breach. All data is stored locally on the device.</p>
+      <p>Our server does not store story content or personal information; it keeps only a daily usage counter linked to a device ID, for at most one day. All other data is stored locally on the device, so the risk of a server-side data breach is very limited.</p>
 
       <h3>Extra Care for Children's Data</h3>
       <div class="child-box">
