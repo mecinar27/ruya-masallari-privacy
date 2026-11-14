@@ -155,6 +155,7 @@
 <nav>
   <a href="#privacy">Privacy Policy</a>
   <a href="#kvkk">Data Protection Notice</a>
+  <a href="#consent">Explicit Consent</a>
   <a href="#terms">Terms of Use</a>
   <a href="#tracking">Tracking Technologies</a>
   <a href="#breach">Data Breach</a>
@@ -169,7 +170,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body open">
-      <div class="meta">Last updated: November 11, 2026 &nbsp;|&nbsp; Effective: November 11, 2026</div>
+      <div class="meta">Last updated: November 14, 2026 &nbsp;|&nbsp; Effective: November 14, 2026</div>
 
       <div class="child-box">
         🧒 <strong>Important:</strong> Dream Tales is an app for children. The app does not collect personal data directly from children; there are no accounts, ads or tracking. Information a parent enters to personalize a story is processed as described below. We recommend using the app under the supervision of a parent or guardian.
@@ -230,7 +231,7 @@
       <ul>
         <li><strong>Transport security:</strong> All data sent from your device to our server and AI services is encrypted with HTTPS/TLS. Cleartext connections are not allowed.</li>
         <li><strong>Purpose limitation:</strong> Personal/sensitive data is processed only to generate the requested story; it is never used for advertising, profiling or sale.</li>
-        <li><strong>Third-party processor:</strong> Data is sent to the Google Gemini API to generate stories. Under Google's standard API terms, submitted content may be used by Google to improve its products. Details: ai.google.dev/gemini-api/terms</li>
+        <li><strong>Third-party processor:</strong> Data is sent to the Google Gemini API to generate stories and is subject to Google's Gemini API terms (ai.google.dev/gemini-api/terms). The app uses Gemini as a paid service; under those terms, content submitted through paid use is not used to improve Google's products and may be kept for a limited time to detect abuse. Transfers abroad happen only with your explicit consent.</li>
         <li><strong>Local storage security:</strong> Data on the device is kept in Android's protected, app-private (sandboxed) storage; other apps cannot access it.</li>
         <li><strong>Data minimization:</strong> The app asks only for the minimum information needed to personalize a story; parents can leave the name empty and use the "Random" option without entering any personal data.</li>
         <li><strong>Server-side access restriction:</strong> Our own server (Google Apps Script) keeps only a daily usage counter linked to a device ID; story content and the information you enter are not stored. The counter is deleted automatically the following day, and only the developer can access it.</li>
@@ -252,7 +253,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Under Turkish Personal Data Protection Law No. 6698 (KVKK) | Last updated: November 11, 2026</div>
+      <div class="meta">Under Turkish Personal Data Protection Law No. 6698 (KVKK) | Last updated: November 14, 2026</div>
 
       <h3>Data Controller</h3>
       <p><strong>Name:</strong> mecinar27 (Independent Developer)<br>
@@ -276,13 +277,13 @@
         <tr>
           <td>AI API Content</td>
           <td>Story parameters (Gemini API)</td>
-          <td>Explicit consent</td>
+          <td>Performance of contract (Art. 5/2-c); transfer abroad: explicit consent (Art. 9)</td>
           <td>Subject to Google's policy</td>
         </tr>
         <tr>
           <td>Images</td>
           <td>Scene description, theme and optional look description for images (Pollinations.ai) – the child's name is not sent</td>
-          <td>Explicit consent</td>
+          <td>Performance of contract (Art. 5/2-c); transfer abroad: explicit consent (Art. 9)</td>
           <td>Subject to Pollinations.ai's policy</td>
         </tr>
         <tr>
@@ -294,18 +295,18 @@
         <tr>
           <td>Story Credits</td>
           <td>Device ID (Android ID) and daily usage counter</td>
-          <td>Performance of contract</td>
+          <td>Legitimate interest (Art. 5/2-f) – applying the daily limit and preventing abuse</td>
           <td>On device – until the app is uninstalled; on the server – until the following day</td>
         </tr>
       </table>
 
       <h3>Children's Data</h3>
       <div class="child-box">
-        🧒 The app is designed for children and does not collect personal data from children under 13. Parents/guardians are responsible for making sure a child's personal information is not entered into story parameters. Parental consent is required for processing any data about a child.
+        🧒 The app is designed for children; no data is collected directly from children. The information that personalizes a story is entered by a parent/guardian, who can use a nickname instead of the child's real name. Explicit consent for transfers abroad can only be given by a parent or legal guardian over 18, on a separate screen.
       </div>
 
       <h3>International Data Transfers</h3>
-      <p>Google Apps Script and the Gemini API (Google LLC, USA) are used to generate stories, and Pollinations.ai (outside Türkiye) is used to generate images. These transfers are carried out with appropriate safeguards under Article 9 of KVKK.</p>
+      <p>Google LLC (Gemini API and Google Apps Script, USA) is used to generate stories, and Pollinations.ai (outside Türkiye) is used to generate images. Under Article 9 of KVKK as amended by Law No. 7499, these transfers rely on the explicit consent you may give separately after being informed of the possible risks. Consent is collected separately from this notice, on its own screen, with a checkbox that is unchecked by default (see Explicit Consent). Without consent, no data is transferred abroad.</p>
 
       <h3>Your Rights</h3>
       <ul>
@@ -319,6 +320,32 @@
 
       <h3>How to Apply</h3>
       <p>To exercise your rights, email <strong>mecinar27@gmail.com</strong>. Requests are answered free of charge within 30 days.</p>
+      <p>You can withdraw your explicit consent for transfers abroad at any time in <strong>Settings → Privacy &amp; Consent</strong>.</p>
+    </div>
+  </div>
+
+  <!-- EXPLICIT CONSENT (separate from the privacy notice) -->
+  <div class="section" id="consent">
+    <div class="section-header" onclick="toggle(this)">
+      <h2>✅ Explicit Consent</h2>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="meta">For transfers abroad | Text version: 1 | Last updated: November 14, 2026</div>
+      <p>This text is separate from the Data Protection Notice. When the app is first opened it is shown on its own screen after the notice, and its checkbox is unchecked by default.</p>
+      <div class="child-box">
+        I have read the Privacy Notice. I give my explicit consent for the information I enter when creating a story (hero name, age group, theme and optionally names of people/toys, parent notes and a look description) to be transferred <strong>to Google LLC (Gemini API, USA) to generate the story text</strong>, and for scene descriptions with the child's name removed to be transferred <strong>to Pollinations.ai (outside Türkiye) to generate images</strong>.
+      </div>
+      <h3>Risks You Are Informed Of</h3>
+      <p>These countries may not offer the same level of personal data protection as Türkiye. Transferred data is subject to these companies' own terms and privacy policies.</p>
+      <h3>Who Can Consent</h3>
+      <p>Consent can only be given by a parent or legal guardian over 18 of the child using the app, who confirms this with a separate checkbox.</p>
+      <h3>Not Consenting and Withdrawing</h3>
+      <ul>
+        <li>Consent is optional. Without consent no data is transferred abroad; AI stories and images stay off, and the stories built into the app can still be read.</li>
+        <li>You can withdraw consent at any time in <strong>Settings → Privacy &amp; Consent</strong>. No new transfers are made from that moment.</li>
+        <li>Your choice is stored only on your device, together with the text version and date. If this text changes, your consent is asked for again.</li>
+      </ul>
     </div>
   </div>
 
@@ -329,7 +356,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Last updated: November 11, 2026</div>
+      <div class="meta">Last updated: November 14, 2026</div>
 
       <h3>1. Parties and Scope</h3>
       <p>These terms apply between mecinar27 (the Developer), who provides the <strong>Dream Tales</strong> app, and the person using the app (the User/Parent). By downloading the app, you agree to these terms.</p>
@@ -403,7 +430,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Last updated: November 11, 2026</div>
+      <div class="meta">Last updated: November 14, 2026</div>
 
       <h3>Technologies Used</h3>
       <p>Dream Tales does not use any SDK for analytics tracking, advertising or user profiling. <strong>No ads are shown and no advertising ID (AAID) is collected.</strong> Only the following external services are used, for content generation and subscription management.</p>
@@ -438,7 +465,7 @@
       <span class="arrow">▾</span>
     </div>
     <div class="section-body">
-      <div class="meta">Last updated: November 11, 2026</div>
+      <div class="meta">Last updated: November 14, 2026</div>
 
       <h3>Risk Assessment</h3>
       <p>Our server does not store story content or personal information; it keeps only a daily usage counter linked to a device ID, for at most one day. All other data is stored locally on the device, so the risk of a server-side data breach is very limited.</p>
